@@ -1,0 +1,172 @@
+.button {
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 600;
+  color: theme("colors.white");
+  display: inline-flex;
+  gap: 10px;
+  position: relative;
+  align-items: center;
+  border-radius: 1000px;
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+  transition:
+    background-image 150ms ease,
+    border 150ms ease,
+    color 150ms ease,
+    opacity 150ms ease,
+    background-color 0ms ease;
+
+  &.df {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  &::before {
+    content: "";
+    opacity: 0;
+    transition: opacity 150ms ease;
+    left: 0;
+    top: 0;
+    border-radius: 1000px;
+    height: 100%;
+    width: 110%;
+    position: absolute;
+  }
+
+  &.lg {
+    font-size: 16px;
+    padding: 13px 22px;
+
+    @screen md {
+      padding: 14px 24px;
+      font-size: 17px;
+    }
+  }
+
+  &.blue {
+    background-color: transparent;
+    background-image: var(--cl-blue-green-gradient-ani);
+    color: theme("colors.white");
+    background-size: 200% auto;
+    animation: SlantedGradientAni 1.4s linear infinite;
+    animation-play-state: paused;
+
+    &:hover {
+      opacity: 0.8;
+      animation-play-state: running;
+    }
+
+    // &:hover {
+    //   border: 1px solid theme("colors.black");
+    //   background-color: theme("colors.white");
+    //   color: theme("colors.black");
+    // }
+  }
+
+  &.transparent {
+    color: inherit;
+    border: 1px solid rgb(var(--cl-black));
+
+    &:hover {
+      border: 1px solid rgb(var(--cl-black) / 0.4);
+    }
+  }
+
+  &.orange {
+    background-color: transparent;
+    background-image: var(--cl-orange-yellow-gradient);
+    color: theme("colors.white");
+  }
+
+  &.white {
+    background-color: theme("colors.white");
+    color: theme("colors.black");
+
+    &:hover {
+      // border: 1px solid theme("colors.white");
+      // background-color: theme("colors.black");
+      // color: theme("colors.white");
+
+      background: rgb(var(--cl-white) / 0.8);
+    }
+  }
+
+  &.black {
+    background: theme("colors.black");
+  }
+
+  &.black,
+  &.white {
+    &.orange-hover {
+      &::before {
+        background-image: var(--cl-orange-yellow-gradient-ani);
+        background-size: 200% auto;
+        animation: SlantedGradientAni 2s linear infinite;
+      }
+
+      &:hover {
+        transition:
+          background-image 150ms ease,
+          border 150ms ease,
+          color 150ms ease,
+          opacity 150ms ease,
+          background-color 0ms ease 150ms;
+        background-color: transparent;
+        color: theme("colors.white");
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.black,
+  &.white {
+    &.blue-hover {
+      &::before {
+        background-image: var(--cl-blue-green-gradient-ani);
+        background-size: 200% auto;
+        animation: SlantedGradientAni 2s linear infinite;
+      }
+
+      &:hover {
+        color: theme("colors.white");
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.black,
+  &.white {
+    &.purple-hover:hover {
+      background-image: var(--cl-purple-pink-gradient-ani);
+      color: theme("colors.white");
+      background-size: 200% auto;
+      animation: SlantedGradientAni 2s linear infinite;
+    }
+  }
+
+  &.black,
+  &.white {
+    &.green-hover:hover {
+      background-image: var(--cl-green-blue-gradient-ani);
+      color: theme("colors.white");
+      background-size: 200% auto;
+      animation: SlantedGradientAni 2s linear infinite;
+    }
+  }
+}
+
+@keyframes SlantedGradientAni {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}

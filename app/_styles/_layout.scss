@@ -1,0 +1,99 @@
+:root {
+  // LAYOUT
+  --outer-gutter: 20px;
+  --gap-gutter: 12px;
+  --max-width: 1240px;
+  --max-width-article: 840px;
+  --header-height: 58px;
+
+  @screen xs {
+    --outer-gutter: 22px;
+  }
+
+  @screen sm {
+    --gap-gutter: 14px;
+    --outer-gutter: 32px;
+  }
+
+  @screen md {
+    --gap-gutter: 16px;
+    --outer-gutter: 40px;
+  }
+
+  @screen lg {
+    --gap-gutter: 20px;
+    --outer-gutter: 64px;
+  }
+}
+
+:root {
+  --section-spacing-3xl: 8.75rem;
+  --section-spacing-2xl: 8rem;
+  --section-spacing-xl: 6rem;
+  --section-spacing-lg: 4.5rem;
+  --section-spacing-md: 3.5rem;
+  --section-spacing-sm: 2.5rem;
+  --section-spacing-xs: 2rem;
+  --section-spacing-2xs: 1rem;
+}
+
+@screen md {
+  :root {
+    --section-spacing-3xl: 12.25rem;
+    --section-spacing-2xl: 10rem;
+    --section-spacing-xl: 8.5rem;
+    --section-spacing-lg: 7rem;
+    --section-spacing-md: 4.5rem;
+    --section-spacing-sm: 3rem;
+    --section-spacing-xs: 2.5rem;
+    --section-spacing-2xs: 1.5rem;
+  }
+}
+
+@screen lg {
+  :root {
+    --section-spacing-3xl: 17.5rem;
+    --section-spacing-2xl: 14rem;
+    --section-spacing-xl: 10.5rem;
+    --section-spacing-lg: 9rem;
+    --section-spacing-md: 6rem;
+    --section-spacing-sm: 4rem;
+    --section-spacing-xs: 3rem;
+    --section-spacing-2xs: 2rem;
+  }
+}
+
+.w-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--outer-gutter);
+  padding-left: var(--outer-gutter);
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.child-upper-center {
+  display: flex;
+  flex-direction: column;
+
+  &.upper--extra {
+    &::before {
+      flex-grow: 3;
+    }
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    width: 100%;
+    content: "";
+  }
+
+  &::before {
+    flex-grow: 4;
+  }
+
+  &::after {
+    flex-grow: 5;
+  }
+}

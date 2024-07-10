@@ -1,0 +1,27 @@
+{
+  "cacheItemsMap": {
+    "change-me.mdx": {
+      "document": {
+        "title": "Change me!",
+        "date": "2022-03-11T00:00:00.000Z",
+        "body": {
+          "raw": "\nWhen you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.\n",
+          "html": "<p>When you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.</p>"
+        },
+        "_id": "change-me.mdx",
+        "_raw": {
+          "sourceFilePath": "change-me.mdx",
+          "sourceFileName": "change-me.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": "change-me"
+        },
+        "type": "Post",
+        "url": "/posts/change-me"
+      },
+      "documentHash": "1694312006144",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    }
+  }
+}

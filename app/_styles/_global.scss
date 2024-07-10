@@ -1,0 +1,38 @@
+:root {
+  --cl-backdrop: 255 255 255;
+
+  --cl-black: 17 17 17;
+  --cl-white: 255 255 255;
+}
+
+html,
+body {
+  background-color: theme("colors.white");
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+* {
+  scroll-margin: 10vh;
+}
+
+.invisible-scrollbar {
+  -ms-overflow-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.search-input {
+  border: 1px solid theme("colors.neutral.500");
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
