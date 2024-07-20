@@ -77,11 +77,6 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 We welcome contributions to this project. If you have suggestions or improvements, please fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Thanks to the CSC318 team at the University of Toronto for their insights and feedback during the development of this project.
-- Special thanks to [Next.js Documentation](https://nextjs.org/docs) for guidance on using Next.js effectively.
